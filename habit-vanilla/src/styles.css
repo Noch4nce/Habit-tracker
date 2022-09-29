@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+
+}
+
 body {
     background-color: #80b5ea;
+    font-family: 'Kalam', cursive;
 }
