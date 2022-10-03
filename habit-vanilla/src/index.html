@@ -2,12 +2,111 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<link rel="stylesheet" href="styles.css" />
 		<title>Habit Tracker</title>
+
+		<link rel="stylesheet" href="styles.css" />
+		<link href="../../dist/output.css" rel="stylesheet" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 
-	<body>
-		<div>YO</div>
+	<!--npx tailwindcss -i ./habit-vanilla/src/styles.css -o ./dist/output.css --watch-->
+	<body class="mt-10">
+		<div class="max-w-[1000px] bg-slate-50 m-auto rounded-xl p-8">
+			<header class="flex justify-between items-center p-[40px]">
+				<h1 class="font-bold text-4xl">My challenges</h1>
+				<button class="font-bold text-6xl">+</button>
+
+				<div
+					class="absolute top-[6rem] right-[19rem] p-5 bg-white shadow-lg rounded-lg hidden"
+				>
+					<label>
+						<input
+							class="outline-none font-bold text-lg"
+							type="text"
+							placeholder="Enter habit name"
+						/>
+					</label>
+					<button class="bg-black text-white py-1 px-3 rounded">
+						Add
+					</button>
+				</div>
+			</header>
+			<main>
+				<section class="rounded-lg bg-black p-8 mb-6">
+					<h3 class="text-white font-semibold mb-3 text-xl">
+						You are almost there
+					</h3>
+					<div
+						class="bg-[#262923] font-bold text-xl text-center rounded-lg overflow-hidden"
+					>
+						<div class="bg-[#F5F6F7]" style="width: 30%">30%</div>
+					</div>
+				</section>
+				<section>
+					<div class="mb-6">
+						<div class="flex items-center gap-4 mb-5">
+							<img
+								src="../assets/lifestyle.png"
+								alt="lifestyle"
+								width="80"
+							/>
+							<span class="font-bold text-2xl">No caffeine</span>
+						</div>
+
+						<div class="flex items-center gap-6">
+							<button
+								class="h-12 w-12 flex items-center justify-center"
+							>
+								<img
+									src="../assets/checked.png"
+									alt="check-mark"
+									width="50"
+								/>
+							</button>
+							<button
+								class="h-12 w-12 flex items-center justify-center"
+							>
+								<img
+									src="../assets/checked.png"
+									alt="check-mark"
+									width="50"
+								/>
+							</button>
+							<button
+								class="rounded-full opacity-70 border-2 border-dashed border-black h-12 w-12 flex items-end justify-center text-4xl uppercase font-bold"
+							>
+								W
+							</button>
+							<button
+								class="rounded-full opacity-70 border-2 border-dashed border-black h-12 w-12 flex items-end justify-center text-4xl uppercase font-bold"
+							>
+								T
+							</button>
+							<button
+								class="rounded-full opacity-70 border-2 border-dashed border-black h-12 w-12 flex items-end justify-center text-4xl uppercase font-bold"
+							>
+								F
+							</button>
+							<button
+								class="rounded-full opacity-70 border-2 border-dashed border-black h-12 w-12 flex items-end justify-center text-4xl uppercase font-bold"
+							>
+								S
+							</button>
+							<button
+								class="rounded-full opacity-70 border-2 border-dashed border-black h-12 w-12 flex items-end justify-center text-4xl uppercase font-bold"
+							>
+								S
+							</button>
+						</div>
+					</div>
+				</section>
+			</main>
+		</div>
 
 		<script src="main.js"></script>
 	</body>
