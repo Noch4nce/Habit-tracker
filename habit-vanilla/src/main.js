@@ -7,11 +7,6 @@ const progressBarSelector = document.getElementById('progressBar')
 
 modalInputSelector.value = ''
 
-// 	<img
-// src="../assets/checked.png"
-// alt="check-mark"
-// width="50"
-// 	/>
 const habitsText = []
 let totalDays = 0
 let checkedCount = 0
@@ -19,7 +14,7 @@ let checkedCount = 0
 const init = () => {
 	const value = localStorage.getItem('habitValue')
 	const parseValue = JSON.parse(value)
-	console.log(parseValue, "parseValue")
+
 	parseValue.map((value) => handleCreateHabit(value))
 }
 
