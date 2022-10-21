@@ -13,25 +13,29 @@
 			rel="stylesheet"
 		/>
 	</head>
-
 	<!--npx tailwindcss -i ./habit-vanilla/src/styles.css -o ./dist/output.css --watch-->
-	<body class="mt-10">
-		<div class="max-w-[1000px] bg-slate-50 m-auto rounded-xl p-8">
-			<header class="flex justify-between items-center p-[40px]">
+	<body class="mt-10 qwe">
+		<div class="container">
+			<header class="flex justify-between items-center p-[40px] relative">
 				<h1 class="font-bold text-4xl">My challenges</h1>
-				<button class="font-bold text-6xl">+</button>
+				<button id="plusBtn" class="font-bold text-6xl">+</button>
 
 				<div
-					class="absolute top-[6rem] right-[19rem] p-5 bg-white shadow-lg rounded-lg hidden"
+					id="modalAdd"
+					class="absolute top-[6rem] right-[19rem] p-5 bg-white shadow-lg rounded-lg hide"
 				>
 					<label>
 						<input
+							id="modalInput"
 							class="outline-none font-bold text-lg"
 							type="text"
 							placeholder="Enter habit name"
 						/>
 					</label>
-					<button class="bg-black text-white py-1 px-3 rounded">
+					<button
+						id="addHabitBtn"
+						class="bg-black text-white py-1 px-3 rounded"
+					>
 						Add
 					</button>
 				</div>
@@ -44,10 +48,16 @@
 					<div
 						class="bg-[#262923] font-bold text-xl text-center rounded-lg overflow-hidden"
 					>
-						<div class="bg-[#F5F6F7]" style="width: 30%">30%</div>
+						<div
+							id="progressBar"
+							class="bg-[#F5F6F7]"
+							style="width: 0%"
+						>
+							0%
+						</div>
 					</div>
 				</section>
-				<section>
+				<section id="habitsContainer">
 					<div class="mb-6">
 						<div class="flex items-center gap-4 mb-5">
 							<img

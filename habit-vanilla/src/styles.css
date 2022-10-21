@@ -2,11 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-
+body {
+	background-color: #80b5ea;
+	font-family: 'Kalam', cursive;
 }
 
-body {
-    background-color: #80b5ea;
-    font-family: 'Kalam', cursive;
+.container {
+	@apply max-w-[1000px] bg-slate-50 m-auto rounded-xl p-8;
+}
+
+.habitChecked {
+	@apply h-12 w-12 flex items-center justify-center;
+
+	font-size: 0;
+	background: url(../assets/checked.png) no-repeat center center;
+	background-size: 48px;
+}
+
+.habitDefault {
+	@apply rounded-full opacity-70 border-2 border-dashed border-black h-12 w-12 flex items-end justify-center text-4xl uppercase font-bold;
+}
+
+.hide {
+	display: none;
 }
